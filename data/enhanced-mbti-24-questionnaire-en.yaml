@@ -1,0 +1,175 @@
+Extraversion-Introversion:
+- '1. When you are in a large group, do you:':
+    A:
+      text: Feel energized and engage with many people
+      value: E
+    B:
+      text: Feel drained and prefer to stick with people you know well
+      value: I
+- '2. At parties, do you:':
+    A:
+      text: Meet new people and mingle throughout the event
+      value: E
+    B:
+      text: Have deep conversations with a few individuals
+      value: I
+- '3. After a long day, do you prefer to:':
+    A:
+      text: Unwind by going out with friends
+      value: E
+    B:
+      text: Relax at home with a book or movie
+      value: I
+- '4. In discussions, are you more:':
+    A:
+      text: Outspoken and interactive
+      value: E
+    B:
+      text: Reflective and reserved
+      value: I
+- '5. Do you prefer activities that involve:':
+    A:
+      text: Active, social interaction
+      value: E
+    B:
+      text: Quiet, solitary focus
+      value: I
+- '6. When working on a project, do you enjoy:':
+    A:
+      text: Brainstorming in a group setting
+      value: E
+    B:
+      text: Working alone or with one familiar partner
+      value: I
+
+Sensing-Intuition:
+- '7. When considering information, do you prefer:':
+    A:
+      text: Specifics and details
+      value: S
+    B:
+      text: Big picture and patterns
+      value: N
+- '8. Do you tend to focus more on:':
+    A:
+      text: Realistic, practical implications
+      value: S
+    B:
+      text: Future possibilities and innovations
+      value: N
+- '9. When you remember an experience, do you usually recall:':
+    A:
+      text: Specific facts and details
+      value: S
+    B:
+      text: The general idea and how you felt about it
+      value: N
+- '10. When solving problems, do you prefer:':
+    A:
+      text: Established methods with concrete examples
+      value: S
+    B:
+      text: Innovative approaches and abstract theories
+      value: N
+- '11. In your daily life, are you more:':
+    A:
+      text: Routine-oriented and detail-focused
+      value: S
+    B:
+      text: Adaptable and always looking for new experiences
+      value: N
+- '12. When making plans, do you prefer:':
+    A:
+      text: Detailed, step-by-step guidelines
+      value: S
+    B:
+      text: A flexible approach with room for improvisation
+      value: N
+
+Thinking-Feeling:
+- '13. When making decisions, do you usually go for:':
+    A:
+      text: Objective analysis and logic
+      value: T
+    B:
+      text: Personal values and the impact on others
+      value: F
+- '14. In conflicts, do you tend to:':
+    A:
+      text: Stay detached and seek a fair solution
+      value: T
+    B:
+      text: Get personally involved and aim for harmony
+      value: F
+- '15. When considering a new opportunity, do you focus more on:':
+    A:
+      text: The logical pros and cons
+      value: T
+    B:
+      text: How it aligns with your values and affects others
+      value: F
+- '16. When giving feedback, are you more likely to:':
+    A:
+      text: Be straightforward and honest, even if it's tough
+      value: T
+    B:
+      text: Be tactful and considerate of the person's feelings
+      value: F
+- '17. Do you value more in yourself the ability to:':
+    A:
+      text: Be rational and analytical
+      value: T
+    B:
+      text: Be empathetic and supportive
+      value: F
+- '18. When it comes to rules and agreements, do you:':
+    A:
+      text: Believe they should be universally applied
+      value: T
+    B:
+      text: Think there's room for exceptions based on circumstances
+      value: F
+
+Judging-Perceiving:
+- '19. When it comes to schedules, do you prefer:':
+    A:
+      text: Having things planned and decided
+      value: J
+    B:
+      text: Staying open to change and new opportunities
+      value: P
+- '20. Do you prefer to work with:':
+    A:
+      text: A clear deadline and a structured approach
+      value: J
+    B:
+      text: Flexibility and the freedom to adapt as you go
+      value: P
+- '21. When faced with a last-minute change, do you:':
+    A:
+      text: Feel stressed and prefer sticking to the plan
+      value: J
+    B:
+      text: Adapt easily and welcome the new direction
+      value: P
+- '22. In your daily life, are you more:':
+    A:
+      text: Organized and like to have things settled
+      value: J
+    B:
+      text: Spontaneous and prefer to keep options open
+      value: P
+- '23. When starting a project, do you:':
+    A:
+      text: Plan out the steps and aim for completion
+      value: J
+    B:
+      text: Explore various possibilities and let the path emerge
+      value: P
+- '24. How do you manage tasks and deadlines?':
+    A:
+      text: Prefer to complete tasks well before the deadline
+      value: J
+    B:
+      text: Work best under the pressure of an approaching deadline
+      value: P
