@@ -1,0 +1,9 @@
+en:
+  name: "English 24 - 3 min"
+  path: "enhanced-mbti-24-questionnaire-en.yaml"
+cn-simp:
+  name: "中文简体 24 - 3 min"
+  path: "enhanced-mbti-24-questionnaire-cn-simp.yaml"
+cn-trad:
+  name: "中文繁体 24 - 3 min"
+  path: "enhanced-mbti-24-questionnaire-cn-trad.yaml"

@@ -1,12 +1,112 @@
-// app/survey.page.tsx
+// app/survey/page.tsx
+'use client';
+import { useEffect, useState } from 'react';
+import yaml from 'js-yaml';
+
+// TypeScript type definitions
+type Option = {
+  text: string;
+  value: string;
+};
+
+type Question = {
+  prompt: string;
+  options: { [key: string]: Option };
+};
+
+type TestVersionInfo = {
+  name: string;
+  path: string;
+};
+
 const SurveyPage = () => {
-    return (
-      <div className="container mt-5">
-        <h1>Survey Page</h1>
-        <p>This is where the survey will go.</p>
-      </div>
-    );
+  const [surveyQuestions, setSurveyQuestions] = useState<Question[]>([]);
+  const [responses, setResponses] = useState<{ [index: number]: string }>({});
+  const [loading, setLoading] = useState(true);
+  const version = new URLSearchParams(window.location.search).get('version') || 'en';  // default to 'en' if no version is specified
+
+  useEffect(() => {
+    const loadTestVersions = async () => {
+      const testVersionsResponse = await fetch('/data/test_versions.yaml');
+      const testVersionsText = await testVersionsResponse.text();
+      const testVersionsData = yaml.load(testVersionsText) as { [key: string]: TestVersionInfo };
+
+      // Get the path for the selected version
+      const versionPath = testVersionsData[version]?.path;
+
+      if (versionPath) {
+        const questionnaireResponse = await fetch(`/data/${versionPath}`);
+        const questionnaireText = await questionnaireResponse.text();
+        const questionnaireData = yaml.load(questionnaireText);
+
+        let questions: Question[] = [];
+
+        // Check if data is an array (Format 2) or an object (Format 1)
+        if (Array.isArray(questionnaireData)) {
+          // Format 2: List of questions directly
+          questions = questionnaireData.map((item: any) => {
+            const [prompt, options] = Object.entries(item)[0];
+            return { prompt, options };
+          });
+        } else {
+          // Format 1: Questions nested under categories
+          for (const category of Object.values(questionnaireData)) {
+            const categoryQuestions = Object.values(category).flat().map((item: any) => {
+              const [prompt, options] = Object.entries(item)[0];
+              return { prompt, options };
+            });
+            questions = [...questions, ...categoryQuestions];
+          }
+        }
+
+        setSurveyQuestions(questions);
+      } else {
+        console.error('Version path not found!');
+      }
+      setLoading(false);
+    };
+
+    loadTestVersions();
+  }, [version]);
+
+  const handleSelection = (index: number, option: string) => {
+    setResponses({
+      ...responses,
+      [index]: option,
+    });
   };
-  
-  export default SurveyPage;
-  
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className="container mt-5">
+      <h1>🗒️ OpenMBTI</h1>
+      <form>
+        {surveyQuestions.map((question, index) => (
+          <div key={index} className="mb-4">
+            <p className="fw-bold">{question.prompt}</p>
+            {Object.entries(question.options).map(([key, option]) => (
+              <div className="form-check" key={key}>
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name={`question-${index}`}
+                  id={`question-${index}-${key}`}
+                  checked={responses[index] === key}
+                  onChange={() => handleSelection(index, key)}
+                />
+                <label className="form-check-label" htmlFor={`question-${index}-${key}`}>
+                  {option.text}
+                </label>
+              </div>
+            ))}
+          </div>
+        ))}
+      </form>
+    </div>
+  );
+};
+
+export default SurveyPage;
