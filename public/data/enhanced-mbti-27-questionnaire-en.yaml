@@ -41,135 +41,163 @@ Extraversion-Introversion:
     B:
       text: Working alone or with one familiar partner
       value: I
+- '7. When faced with a weekend with no plans, do you:':
+    A:
+      text: Feel excited about the spontaneous possibilities
+      value: E
+    B:
+      text: Relish the opportunity for quiet time and solitude
+      value: I
 
 Sensing-Intuition:
-- '7. When considering information, do you prefer:':
+- '8. When considering information, do you prefer:':
     A:
       text: Specifics and details
       value: S
     B:
       text: Big picture and patterns
       value: N
-- '8. Do you tend to focus more on:':
+- '9. Do you tend to focus more on:':
     A:
       text: Realistic, practical implications
       value: S
     B:
       text: Future possibilities and innovations
       value: N
-- '9. When you remember an experience, do you usually recall:':
+- '10. When you remember an experience, do you usually recall:':
     A:
       text: Specific facts and details
       value: S
     B:
       text: The general idea and how you felt about it
       value: N
-- '10. When solving problems, do you prefer:':
+- '11. When solving problems, do you prefer:':
     A:
       text: Established methods with concrete examples
       value: S
     B:
       text: Innovative approaches and abstract theories
       value: N
-- '11. In your daily life, are you more:':
+- '12. In your daily life, are you more:':
     A:
       text: Routine-oriented and detail-focused
       value: S
     B:
       text: Adaptable and always looking for new experiences
       value: N
-- '12. When making plans, do you prefer:':
+- '13. When discussing future trends, do you:':
     A:
-      text: Detailed, step-by-step guidelines
+      text: Prefer to talk about practical, immediate applications
       value: S
     B:
-      text: A flexible approach with room for improvisation
+      text: Enjoy imagining the long-term implications and transformations
+      value: N
+- '14. When you encounter a new idea, do you:':
+    A:
+      text: Analyze its practicality based on current realities
+      value: S
+    B:
+      text: Get excited by its potential and explore its possibilities
       value: N
 
 Thinking-Feeling:
-- '13. When making decisions, do you usually go for:':
+- '15. When making decisions, do you usually go for:':
     A:
       text: Objective analysis and logic
       value: T
     B:
       text: Personal values and the impact on others
       value: F
-- '14. In conflicts, do you tend to:':
+- '16. In conflicts, do you tend to:':
     A:
       text: Stay detached and seek a fair solution
       value: T
     B:
       text: Get personally involved and aim for harmony
       value: F
-- '15. When considering a new opportunity, do you focus more on:':
+- '17. When considering a new opportunity, do you focus more on:':
     A:
       text: The logical pros and cons
       value: T
     B:
       text: How it aligns with your values and affects others
       value: F
-- '16. When giving feedback, are you more likely to:':
+- '18. When giving feedback, are you more likely to:':
     A:
       text: Be straightforward and honest, even if it's tough
       value: T
     B:
       text: Be tactful and considerate of the person's feelings
       value: F
-- '17. Do you value more in yourself the ability to:':
-    A:
-      text: Be rational and analytical
-      value: T
-    B:
-      text: Be empathetic and supportive
-      value: F
-- '18. When it comes to rules and agreements, do you:':
+- '19. When it comes to rules and agreements, do you:':
     A:
       text: Believe they should be universally applied
       value: T
     B:
       text: Think there's room for exceptions based on circumstances
       value: F
+- '20. When you receive praise, do you prefer it to be for:':
+    A:
+      text: Your logical reasoning and competence
+      value: T
+    B:
+      text: Your compassion and understanding of others
+      value: F
+- '21. When faced with a group decision, do you:':
+    A:
+      text: Seek the most logical and efficient solution
+      value: T
+    B:
+      text: Strive to achieve consensus and address people's feelings
+      value: F
 
 Judging-Perceiving:
-- '19. When it comes to schedules, do you prefer:':
+- '22. When it comes to schedules, do you prefer:':
     A:
       text: Having things planned and decided
       value: J
     B:
       text: Staying open to change and new opportunities
       value: P
-- '20. Do you prefer to work with:':
+- '23. Do you prefer to work with:':
     A:
       text: A clear deadline and a structured approach
       value: J
     B:
       text: Flexibility and the freedom to adapt as you go
       value: P
-- '21. When faced with a last-minute change, do you:':
+- '24. When faced with a last-minute change, do you:':
     A:
       text: Feel stressed and prefer sticking to the plan
       value: J
     B:
       text: Adapt easily and welcome the new direction
       value: P
-- '22. In your daily life, are you more:':
+- '25. In your daily life, are you more:':
     A:
       text: Organized and like to have things settled
       value: J
     B:
       text: Spontaneous and prefer to keep options open
       value: P
-- '23. When starting a project, do you:':
-    A:
-      text: Plan out the steps and aim for completion
-      value: J
-    B:
-      text: Explore various possibilities and let the path emerge
-      value: P
-- '24. How do you manage tasks and deadlines?':
+- '26. How do you manage tasks and deadlines?':
     A:
       text: Prefer to complete tasks well before the deadline
       value: J
     B:
       text: Work best under the pressure of an approaching deadline
+      value: P
+- '27. When it comes to hobbies, do you:':
+    A:
+      text: Pursue them with a sense of order and progression
+      value: J
+    B:
+      text: Enjoy them spontaneously, without a set plan or schedule
+      value: P
+- '28. When planning for the future, do you:':
+    A:
+      text: Set long-term goals and steadily work towards them
+      value: J
+    B:
+      text: Keep your options open and adapt as opportunities arise
       value: P

@@ -76,6 +76,23 @@ const SurveyPage = () => {
     });
   };
 
+  // Function to create a JSON object and navigate to another page
+  const submitResponses = () => {
+    const formattedResponses = Object.entries(responses).map(([questionIndex, optionKey]) => {
+      const question = surveyQuestions[parseInt(questionIndex)];
+      const option = question.options[optionKey];
+      return {
+        question: question.prompt,
+        selectedOption: option.text,
+        value: option.value
+      };
+    });
+
+    const responsesJSON = JSON.stringify(formattedResponses);
+    console.log(responsesJSON);
+    // navigate('/results', { state: { responses: responsesJSON } }); // Navigate to results page with responses
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -104,6 +121,10 @@ const SurveyPage = () => {
             ))}
           </div>
         ))}
+
+<button type="button" onClick={submitResponses} className="btn btn-primary mt-3">
+          Print Responses
+        </button>
       </form>
     </div>
   );
