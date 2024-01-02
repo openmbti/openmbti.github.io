@@ -90,7 +90,7 @@ const SurveyPage = () => {
       };
     });
     const responsesJSON = JSON.stringify(formattedResponses);
-    console.log(responsesJSON)
+    // console.log(responsesJSON)
     // Use a template string to include the responsesJSON directly in the path
     const path = `/result?responses=${encodeURIComponent(responsesJSON)}`;
     router.push(path);
