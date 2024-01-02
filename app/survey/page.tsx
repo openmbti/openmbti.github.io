@@ -1,6 +1,7 @@
 // app/survey/page.tsx
 'use client';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import yaml from 'js-yaml';
 
 // TypeScript type definitions
@@ -24,6 +25,7 @@ const SurveyPage = () => {
   const [responses, setResponses] = useState<{ [index: number]: string }>({});
   const [loading, setLoading] = useState(true);
   const version = new URLSearchParams(window.location.search).get('version') || 'en';  // default to 'en' if no version is specified
+  const router = useRouter();
 
   useEffect(() => {
     const loadTestVersions = async () => {
@@ -87,11 +89,13 @@ const SurveyPage = () => {
         value: option.value
       };
     });
-
     const responsesJSON = JSON.stringify(formattedResponses);
-    console.log(responsesJSON);
-    // navigate('/results', { state: { responses: responsesJSON } }); // Navigate to results page with responses
+    console.log(responsesJSON)
+    // Use a template string to include the responsesJSON directly in the path
+    const path = `/result?responses=${encodeURIComponent(responsesJSON)}`;
+    router.push(path);
   };
+  
 
   if (loading) {
     return <div>Loading...</div>;
